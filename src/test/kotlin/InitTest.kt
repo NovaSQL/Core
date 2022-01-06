@@ -13,16 +13,15 @@ class TestDriver : Driver {
 
     override fun getVersion(): String = "1.0.0"
 
-    override fun onDisable() {
-        TODO("Not yet implemented")
+    override fun onInitialize() {
+        NovaSQLCore.logger.debug("${getName()} ${getVersion()} initialized.")
     }
 
     override fun onEnable() {
-        TODO("Not yet implemented")
+        NovaSQLCore.logger.debug("${getName()} ${getVersion()} enabled.")
     }
 
-    override fun onInitialize() {
-        NovaSQLCore.logger.info("${getName()} ${getVersion()} initialized.")
+    override fun onDisable() {
+        NovaSQLCore.logger.debug("${getName()} ${getVersion()} disabled.")
     }
-
 }
