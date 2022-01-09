@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory
 
 class NovaSQLCore : NovaSQL() {
     companion object {
-        @JvmStatic val logger = LoggerFactory.getLogger(NovaSQLCore::class.java)
+        @JvmStatic val logger = LoggerFactory.getLogger(NovaSQLCore::class.java)!!
         @JvmStatic val drivers = mutableMapOf<String, Driver>()
 
 
